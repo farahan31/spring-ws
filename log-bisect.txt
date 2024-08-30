@@ -1,0 +1,21 @@
+git bisect start
+# status: waiting for both good and bad commits
+# bad: [27b07a57ffac93fa72f7687b0c56f43b4153e8ba] Migrate build to Develocity Conventions Maven extension. (#1426)
+git bisect bad 27b07a57ffac93fa72f7687b0c56f43b4153e8ba
+# status: waiting for good commit(s), bad commit known
+# good: [071f344a3a8871ad8fd6403357e5cd985c4dc3fc] Update transformLocation to not append port when serverName has : after @. (#1422)
+git bisect good 071f344a3a8871ad8fd6403357e5cd985c4dc3fc
+# bad: [d6b840c01a132e03421593245c0767a80b3f3b4f] Update Docker settings.
+git bisect bad d6b840c01a132e03421593245c0767a80b3f3b4f
+# good: [325904532d956d9048a96665094e21d5266d2450] Update Harbor settings.
+git bisect good 325904532d956d9048a96665094e21d5266d2450
+# first bad commit: [d6b840c01a132e03421593245c0767a80b3f3b4f] Update Docker settings.
+# good: [325904532d956d9048a96665094e21d5266d2450] Update Harbor settings.
+git bisect good 325904532d956d9048a96665094e21d5266d2450
+# first bad commit: [d6b840c01a132e03421593245c0767a80b3f3b4f] Update Docker settings.
+# bad: [325904532d956d9048a96665094e21d5266d2450] Update Harbor settings.
+git bisect bad 325904532d956d9048a96665094e21d5266d2450
+# good: [325904532d956d9048a96665094e21d5266d2450] Update Harbor settings.
+git bisect good 325904532d956d9048a96665094e21d5266d2450
+# good: [325904532d956d9048a96665094e21d5266d2450] Update Harbor settings.
+git bisect good 325904532d956d9048a96665094e21d5266d2450
